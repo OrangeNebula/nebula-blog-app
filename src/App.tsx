@@ -1,13 +1,18 @@
 import './App.css';
-import Title from './core/components/Typography/Title';
-import Logo from './core/components/Logo/Logo';
-import Background from './core/components/Background/Background';
-import ArticleRepositoryMock from './Article/repository/ArticleRepository.mock';
-import ArticleList from './Article/components/ArticleList';
-import ArticleView from './Article/components/ArticleView';
-import {useEffect, useState} from 'react';
-import {Article} from './Article/domain/Article';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+} from 'react-router-dom';
+// import Title from './core/components/Typography/Title';
+// import Logo from './core/components/Logo/Logo';
+// import Background from './core/components/Background/Background';
+// import ArticleRepositoryMock from './Article/repository/ArticleRepository.mock';
+// import ArticleList from './Article/components/ArticleList';
+// import ArticleView from './Article/components/ArticleView';
+// import { Article } from './Article/domain/Article';
+import Header from './core/components/Header/Header';
 
+/*
 function MockScreen() {
   const [mockArticles, setMockData] = useState<Article[]>([]);
 
@@ -33,19 +38,24 @@ function MockScreen() {
         ))
       }
     </>
-  )
+  );
 }
+*/
 
 function App() {
   return (
-    <div className="App">
-      {/*<Background />*/}
-      <Logo />
-      <Title>
-        Nebula blog
-      </Title>
-      <MockScreen />
-    </div>
+    <Router>
+      <Header />
+      {/* <div className="App">
+        <Background />
+        <Logo />
+        <Title>
+          Nebula blog
+        </Title>
+        <MockScreen />
+      </div> */}
+
+    </Router>
   );
 }
 

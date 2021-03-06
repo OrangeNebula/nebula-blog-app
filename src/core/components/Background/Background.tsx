@@ -3,7 +3,16 @@ import styles from './Background.module.css';
 import Colors from '../../theme/Colors';
 import ShootingStar from '../../domain/ShootingStar';
 
-function roundRect(ctx: any, x: number, y: number, width: number, height: number, radius: number, fill = true, stroke = false): void {
+function roundRect(
+  ctx: any,
+  x: number,
+  y: number,
+  width: number,
+  height: number,
+  radius: number,
+  fill = true,
+  stroke = false,
+): void {
   ctx.beginPath();
   ctx.moveTo(x + radius, y);
   ctx.lineTo(x + width - radius, y);
@@ -28,7 +37,9 @@ function resizeCanvas(canvas: any) {
   if (canvas.width !== width || canvas.height !== height) {
     const { devicePixelRatio: ratio = 1 } = window;
     const context = canvas.getContext('2d');
+    // eslint-disable-next-line no-param-reassign
     canvas.width = width * ratio;
+    // eslint-disable-next-line no-param-reassign
     canvas.height = height * ratio;
     context.scale(ratio, ratio);
     return true;
@@ -49,8 +60,8 @@ function Background() {
     new ShootingStar(boundWidth, boundHeight, 30000),
   ]);
 
-  const draw = (ctx: any, canvas: any, frameCount: number, shootingStars: ShootingStar[]) => {
-    let { length } = shootingStars;
+  const draw = (ctx: any, canvas: any, frameCount: number, stars: ShootingStar[]) => {
+    let { length } = stars;
     resizeCanvas(canvas);
     ctx.fillStyle = Colors.White;
     ctx.fillRect(0, 0, boundWidth, boundHeight);
@@ -59,17 +70,18 @@ function Background() {
     ctx.shadowBlur = 100;
     ctx.shadowColor = Colors.NebulaGray;
 
+    // eslint-disable-next-line no-plusplus
     while (length--) {
-      shootingStars[length].update();
-      if (shootingStars[length].active && !shootingStars[length].isOut()) {
+      stars[length].update();
+      if (stars[length].active && !stars[length].isOut()) {
         ctx.fillStyle = Colors.NebulaDarkGray;
         ctx.strokeStyle = Colors.NebulaLightGray;
-        ctx.lineWidth = shootingStars[length].size;
+        ctx.lineWidth = stars[length].size;
         ctx.beginPath();
-        ctx.moveTo(shootingStars[length].x, shootingStars[length].y);
+        ctx.moveTo(stars[length].x, stars[length].y);
         ctx.lineTo(
-          shootingStars[length].x + shootingStars[length].len,
-          shootingStars[length].y - shootingStars[length].len,
+          stars[length].x + stars[length].len,
+          stars[length].y - stars[length].len,
         );
         ctx.stroke();
 
@@ -77,8 +89,8 @@ function Background() {
         ctx.shadowBlur = 100;
         ctx.shadowColor = Colors.NebulaGray;
         roundRect(ctx,
-          shootingStars[length].x - 1.5,
-          shootingStars[length].y - 1.5, 3, 3, 1.5);
+          stars[length].x - 1.5,
+          stars[length].y - 1.5, 3, 3, 1.5);
       }
     }
   };
@@ -93,6 +105,7 @@ function Background() {
       // @ts-ignore
       const context = canvas.getContext('2d');
       const render = () => {
+        // eslint-disable-next-line no-plusplus
         frameCount++;
         draw(context, canvas, frameCount, shootingStars);
         animationFrameId = window.requestAnimationFrame(render);
