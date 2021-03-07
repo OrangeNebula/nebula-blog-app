@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-shadow
 enum Colors {
   NebulaGray = '#424242',
   NebulaLightGray = '#dbdbdb',

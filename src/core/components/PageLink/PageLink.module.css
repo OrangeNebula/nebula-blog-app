@@ -1,0 +1,15 @@
+.Link a:link {
+    color: gray;
+}
+
+.Link a:visited {
+    color: gray;
+}
+
+.Link a:hover {
+    color: gray;
+}
+
+.Link a:active {
+    color: gray;
+}

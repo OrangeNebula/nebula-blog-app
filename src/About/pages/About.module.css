@@ -1,0 +1,21 @@
+.ImgWrap {
+    display: flex;
+    justify-content: center;
+}
+
+.ImgWrap img {
+    width: 250px;
+    height: 250px;
+    border-radius: 600px;
+    object-fit: cover;
+}
+
+.Profile {
+
+}
+
+.Profile ul {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+}

@@ -44,7 +44,7 @@ export default class ShootingStar {
     this.x = Math.random() * this.boundWidth;
     this.y = 0;
     this.len = (Math.random() * 80) + 10;
-    this.speed = (Math.random() * 2);
+    this.speed = (Math.random() * 8);
     this.size = Math.random() + 0.1;
     this.wait = this.wait || new Date().getTime() + (Math.random() * 3000) + 500;
     this.active = false;

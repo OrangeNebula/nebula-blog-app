@@ -1,15 +1,24 @@
 import ReactMarkdown from 'react-markdown';
 import Title from '../../core/components/Typography/Title';
 
-function ArticleView(props: { title: string; contents: string }) {
+interface Props {
+  title: string;
+  contents: string;
+}
+
+function ArticleView({ title, contents }: Props) {
   return (
     <div>
-      <Title> {props.title} </Title>
+      <Title>
+        {' '}
+        {title}
+        {' '}
+      </Title>
       <ReactMarkdown>
-        { props.contents }
+        { contents }
       </ReactMarkdown>
     </div>
-  )
+  );
 }
 
 export default ArticleView;

@@ -1,11 +1,14 @@
 class Article {
+  public readonly createdAt: Date;
+
   constructor(
     public readonly title: string,
     public readonly contents: string,
-    public readonly createdAt: Date,
+    createdAt: Date,
     public readonly updatedAt: Date,
   ) {
+    this.createdAt = createdAt || new Date();
   }
 }
 
-export { Article }
+export { Article };

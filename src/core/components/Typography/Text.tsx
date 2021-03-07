@@ -3,7 +3,7 @@ function Text({ children }: { children: any }) {
     <p>
       { children }
     </p>
-  )
+  );
 }
 
 export default Text;

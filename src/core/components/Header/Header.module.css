@@ -1,0 +1,15 @@
+.List {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.Item {
+    font-weight: lighter;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.Item:hover {
+    text-decoration: underline;
+}

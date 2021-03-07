@@ -21,10 +21,14 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'import/prefer-default-export': 'off',
+    'class-methods-use-this': 'off',
     'react/react-in-jsx-scope': 'off',
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error'],
+    'no-unused-vars': ['warn'],
+    'no-useless-constructor': ['warn'],
     '@typescript-eslint/no-unused-vars': ['warn'],
+    '@typescript-eslint/no-use-before-define': ['error'],
     'react/jsx-filename-extension': ['error', {
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
     }],

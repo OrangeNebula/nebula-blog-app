@@ -11,7 +11,6 @@ const mockData = [
       + '\n'
       + '        ```jsx\n'
       + '        $env:LC_ALL=\'C.UTF-8\'\n'
-      + '        [System.Console]::InputEncoding = [System.Console]::OutputEncoding = [System.Text.Encoding]::UTF8 \n'
       + '        ```\n'
       + '\n'
       + '    - node-gyp [README](https://github.com/nodejs/node-gyp) 에 나오는대로 윈도우의 빌드 환경을 구성한다.\n'
