@@ -23,13 +23,13 @@ function App() {
       <Router>
         <Header
           items={[
-            { label: 'Home', path: '/home' },
+            { label: 'Home', path: '/' },
             { label: 'About', path: '/about' },
             { label: 'Articles', path: '/articles' },
           ]}
         />
         <Switch>
-          <Route path="/home">
+          <Route exact path="/">
             <Home />
           </Route>
           <Route path="/about">

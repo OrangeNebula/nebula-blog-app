@@ -18,9 +18,7 @@ export default function About() {
           <li> 강지현 </li>
           <li> rednebula01018@gmail.com </li>
           <li>
-            {' '}
             <br />
-            {' '}
           </li>
           <li> 맘편한세상, Cofounder 개발파트장, (2016 -) </li>
           <li> LG CNS, Software Engineer Intern, (2016) </li>
