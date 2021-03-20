@@ -1,21 +1,23 @@
-import Title from '../../core/components/Typography/Title';
+import React from 'react';
+import Title from '../../Core/components/Typography/Title';
+import styles from './ArticleList.module.css';
+import { Article } from '../domain/Article';
 
-function ArticleList(props: { articles: { title: string }[] }) {
-  const {
-    articles,
-  } = props;
+type Props = {
+  articles: Article[],
+}
+
+function ArticleList({ articles }: Props) {
   return (
     <div>
       {
         articles.map((item) => (
-          <div>
+          <a href={`/articles/${item.id}`}>
             <Title>
-              {' '}
               {item.title}
-              {' '}
             </Title>
-            <hr />
-          </div>
+            <hr className={styles.Divider} />
+          </a>
         ))
       }
     </div>

@@ -5,13 +5,18 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import Header from './core/components/Header/Header';
+import Header from './Core/components/Header/Header';
 import About from './About/pages/About';
-import Articles from './Article/pages/Articles';
+import ViewArticleList from './Article/pages/ViewArticleList';
 import Home from './Home/pages/Home';
-import Background from './core/components/Background/Background';
+import Background from './Core/components/Background/Background';
+import { NotFound } from './Core/pages/NotFound';
+import { ViewArticle } from './Article/pages/ViewArticle';
+import ArticleRepositoryMock from './Article/repository/ArticleRepository.mock';
 
 function App() {
+  const articleRepository = new ArticleRepositoryMock();
+
   return (
     <div className="App">
       {/* <Background /> */}
@@ -30,8 +35,14 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
+          <Route path="/articles/:id">
+            <ViewArticle repository={articleRepository} />
+          </Route>
           <Route path="/articles">
-            <Articles />
+            <ViewArticleList repository={articleRepository} />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
       </Router>

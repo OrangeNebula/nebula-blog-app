@@ -4,4 +4,11 @@ export class MathUtil {
     const maximum = Math.floor(max);
     return Math.floor(Math.random() * (maximum - minimum) + minimum);
   }
+
+  static parseNumber(value: string | undefined): number {
+    if (!value) {
+      return 0;
+    }
+    return parseInt(value, 10);
+  }
 }

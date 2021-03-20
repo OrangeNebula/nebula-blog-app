@@ -2,6 +2,7 @@ class Article {
   public readonly createdAt: Date;
 
   constructor(
+    public readonly id: number,
     public readonly title: string,
     public readonly contents: string,
     createdAt: Date,

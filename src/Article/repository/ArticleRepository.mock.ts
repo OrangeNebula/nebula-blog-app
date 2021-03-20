@@ -3,6 +3,7 @@ import { AbstractArticleRepository } from './AbstractArticleRepository';
 
 const mockData = [
   {
+    id: 1,
     title: '윈도우 node-gyp 에러 해결하기',
     contents: '### 기타\n'
       + '\n'
@@ -30,6 +31,7 @@ const mockData = [
       + '        ```',
   },
   {
+    id: 2,
     title: 'API 설계 가이드',
     contents: '### [16.3.2 Handling an Unexpected Halt of a Replication Slave](https://dev.mysql.com/doc/refman/5.7/en/replication-solutions-unexpected-slave-halt.html)\n\n### [16.3.6 Improving Replication Performance](https://dev.mysql.com/doc/refman/5.7/en/replication-solutions-performance.html)\n\nAs the number of slaves connecting to a master increases, the load, although minimal, also increases, as each slave uses a client connection to the master. Also, as each slave must receive a full copy of the master binary log, the network load on the master may also increase and create a bottleneck.\n\nOne way to improve the performance of the replication process is to create a deeper replication structure that enables the master to replicate to only one slave, and for the remaining slaves to connect to this primary slave for their individual replication requirements\n\n→ replication 만 담당하는 slave master 를 따로 두는 방법으로 performance 를 향상시킬 수 있다.\n\n그 외에도 아래와 같은 방법이 존재\n\n- If possible, put the relay logs and the data files on different physical drives. To do this, set the `[relay_log](https://dev.mysql.com/doc/refman/5.7/en/replication-options-slave.html#sysvar_relay_log)` system variable to specify the location of the relay log.\n- If the slaves are significantly slower than the master, you may want to divide up the responsibility for replicating different databases to different slaves. See [Section 16.3.5, “Replicating Different Databases to Different Slaves”](https://dev.mysql.com/doc/refman/5.7/en/replication-solutions-partitioning.html).\n- If your master makes use of transactions and you are not concerned about transaction support on your slaves, use `MyISAM` or another nontransactional engine on the slaves. See [Section 16.3.3, “Using Replication with Different Master and Slave Storage Engines”](https://dev.mysql.com/doc/refman/5.7/en/replication-solutions-diffengines.html).\n- If your slaves are not acting as masters, and you have a potential solution in place to ensure that you can bring up a master in the event of failure, then you can disable the `[log_slave_updates](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_log_slave_updates)` system variable on the slaves. This prevents “dumb” slaves from also logging events they have executed into their own binary log.',
     createdAt: '2021-02-21 12:00',
@@ -42,6 +44,7 @@ export default class ArticleRepositoryMock extends AbstractArticleRepository {
     return Promise.resolve({
       data: mockData.map((item) => (
         new Article(
+          item.id,
           item.title,
           item.contents,
           new Date(),
@@ -50,6 +53,20 @@ export default class ArticleRepositoryMock extends AbstractArticleRepository {
       )),
       next: '',
     });
+  }
+
+  find(id: number): Promise<Article | null> {
+    const data = mockData.find((item) => item.id === id);
+    if (!data) {
+      return Promise.resolve(null);
+    }
+    return Promise.resolve(new Article(
+      data.id,
+      data.title,
+      data.contents,
+      new Date(),
+      new Date(),
+    ));
   }
 
   update(item: Article): Promise<void> {

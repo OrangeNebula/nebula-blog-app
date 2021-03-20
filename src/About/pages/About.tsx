@@ -1,5 +1,5 @@
 import styles from './About.module.css';
-import { MathUtil } from '../../core/util/MathUtil';
+import { MathUtil } from '../../Core/util/MathUtil';
 
 export default function About() {
   const images = [

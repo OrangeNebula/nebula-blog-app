@@ -1,12 +1,12 @@
 import ReactMarkdown from 'react-markdown';
-import Title from '../../core/components/Typography/Title';
+import Title from '../../Core/components/Typography/Title';
 
 interface Props {
   title: string;
   contents: string;
 }
 
-function ArticleView({ title, contents }: Props) {
+function ArticleContent({ title, contents }: Props) {
   return (
     <div>
       <Title>
@@ -21,4 +21,4 @@ function ArticleView({ title, contents }: Props) {
   );
 }
 
-export default ArticleView;
+export default ArticleContent;
