@@ -1,3 +1,8 @@
+.Wrap {
+    margin-top: 40px;
+}
+
 .Divider {
-    border-color: gray;
+    border-top: none;
+    border-bottom: 1px solid #eee;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Title from '../../Core/components/Typography/Title';
 import styles from './ArticleList.module.css';
 import { Article } from '../domain/Article';
+import Subtitle from '../../Core/components/Typography/Subtitle';
 
 type Props = {
   articles: Article[],
@@ -9,13 +10,13 @@ type Props = {
 
 function ArticleList({ articles }: Props) {
   return (
-    <div>
+    <div className={styles.Wrap}>
       {
         articles.map((item) => (
           <a href={`/articles/${item.id}`}>
-            <Title>
+            <Subtitle>
               {item.title}
-            </Title>
+            </Subtitle>
             <hr className={styles.Divider} />
           </a>
         ))
