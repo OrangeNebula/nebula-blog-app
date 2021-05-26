@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import Title from '../../Core/components/Typography/Title';
+import styles from './ArticleContent.module.css';
 
 interface Props {
   title: string;
@@ -14,7 +15,7 @@ function ArticleContent({ title, contents }: Props) {
         {title}
         {' '}
       </Title>
-      <ReactMarkdown>
+      <ReactMarkdown className={styles.Wrap}>
         { contents }
       </ReactMarkdown>
     </div>
