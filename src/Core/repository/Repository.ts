@@ -1,5 +1,5 @@
 export abstract class Repository<T> {
-  abstract get(): Promise<{ data: T[]; next: string | null }>;
+  abstract get(): Promise<T[]>;
 
   abstract update(item: T): Promise<void>;
 }

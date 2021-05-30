@@ -1,8 +1,9 @@
 import React from 'react';
-import Title from '../../Core/components/Typography/Title';
 import styles from './ArticleList.module.css';
 import { Article } from '../domain/Article';
 import Subtitle from '../../Core/components/Typography/Subtitle';
+import Caption from '../../Core/components/Typography/Caption';
+import DateText from '../../Core/components/Date/DateText';
 
 type Props = {
   articles: Article[],
@@ -13,12 +14,16 @@ function ArticleList({ articles }: Props) {
     <div className={styles.Wrap}>
       {
         articles.map((item) => (
-          <a href={`/articles/${item.id}`}>
-            <Subtitle>
-              {item.title}
-            </Subtitle>
-            <hr className={styles.Divider} />
-          </a>
+          <div className={styles.Item}>
+            <a href={`/articles/${item.id}`}>
+              <Subtitle>
+                {item.title}
+              </Subtitle>
+            </a>
+            <Caption>
+              <DateText date={item.createdAt} />
+            </Caption>
+          </div>
         ))
       }
     </div>

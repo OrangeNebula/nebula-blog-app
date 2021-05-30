@@ -12,8 +12,8 @@ export default function ViewArticleList({ repository }: Props) {
 
   useEffect(() => {
     async function fetchList() {
-      const result = await repository.get();
-      setArticles(result.data);
+      const data = await repository.get();
+      setArticles(data);
     }
     fetchList();
   });
