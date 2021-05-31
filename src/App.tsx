@@ -19,7 +19,11 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Background /> */}
+      {
+        process.env.NODE_ENV === 'production' && (
+          <Background />
+        )
+      }
       <Router>
         <Header
           items={[
