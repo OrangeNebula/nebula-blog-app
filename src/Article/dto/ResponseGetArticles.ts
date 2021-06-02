@@ -1,6 +1,10 @@
-import {Article} from '../domain/Article';
-
 export default interface ResponseGetArticles {
-  articles: Article[];
-  next: string | null;
-}
+  articles: {
+    id: number;
+    title: string;
+    createdAt: string;
+    updatedAt: string;
+    url: string;
+  }[];
+  next?: string | null;
+};
