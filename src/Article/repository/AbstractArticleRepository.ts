@@ -1,8 +1,8 @@
-import { Repository } from '../../Core/repository/Repository';
 import { Article } from '../domain/Article';
+import { ArticleListItem } from '../domain/ArticleListItem';
 
-export abstract class AbstractArticleRepository extends Repository<Article> {
-  abstract get(): Promise<Article[]>;
+export abstract class AbstractArticleRepository {
+  abstract get(): Promise<ArticleListItem[]>;
 
   abstract find(id: number): Promise<Article | null>;
 

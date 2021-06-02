@@ -26,6 +26,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'no-use-before-define': 'off',
     'no-unused-vars': ['warn'],
+    'no-empty-function': ['warn'],
     'no-useless-constructor': ['warn'],
     '@typescript-eslint/no-unused-vars': ['warn'],
     '@typescript-eslint/no-use-before-define': ['error'],

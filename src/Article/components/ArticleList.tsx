@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './ArticleList.module.css';
-import { Article } from '../domain/Article';
 import Subtitle from '../../Core/components/Typography/Subtitle';
 import Caption from '../../Core/components/Typography/Caption';
 import DateText from '../../Core/components/Date/DateText';
+import { ArticleListItem } from '../domain/ArticleListItem';
 
 type Props = {
-  articles: Article[],
+  articles: ArticleListItem[],
 }
 
 function ArticleList({ articles }: Props) {
@@ -20,9 +20,11 @@ function ArticleList({ articles }: Props) {
                 {item.title}
               </Subtitle>
             </a>
-            <Caption>
-              <DateText date={item.createdAt} />
-            </Caption>
+            <div className={styles.CreateDate}>
+              <Caption>
+                <DateText date={item.createdAt} />
+              </Caption>
+            </div>
           </div>
         ))
       }
