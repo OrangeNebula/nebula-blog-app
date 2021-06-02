@@ -11,11 +11,18 @@
 }
 
 .Profile {
-
+    font-size: 0.8em;
 }
 
 .Profile ul {
     list-style: none;
     text-align: center;
     padding-left: 0;
+}
+
+
+@media screen and (max-width: 700px) {
+    .Profile {
+        font-size: 0.6em;
+    }
 }

@@ -20,6 +20,7 @@ export default function Header({ items = [] }: Props) {
                 style={{
                   color: Colors.NebulaGray,
                 }}
+                key={item.label}
               >
                 <PageLink label={item.label} path={item.path} />
               </li>

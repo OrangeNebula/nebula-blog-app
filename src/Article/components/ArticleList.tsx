@@ -14,7 +14,7 @@ function ArticleList({ articles }: Props) {
     <div className={styles.Wrap}>
       {
         articles.map((item) => (
-          <div className={styles.Item}>
+          <div className={styles.Item} key={item.id}>
             <a href={`/articles/${item.id}`}>
               <Subtitle>
                 {item.title}
