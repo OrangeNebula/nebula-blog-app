@@ -1,0 +1,13 @@
+.BackGroundImage {
+    width: 100%;
+    animation: Rotation 120s infinite linear;
+}
+
+@keyframes Rotation {
+    0%{
+        transform:rotateZ(0);
+    }
+    100%{
+        transform:rotateZ(-360deg);
+    }
+}
