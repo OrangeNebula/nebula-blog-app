@@ -8,6 +8,7 @@
 * [ ] 홈화면 컨텐츠 - 해시 태그 리스트 노출
 * [ ] 홈화면 컨텐츠 - 최근 작성된 글 섹션
 * [ ] 홈화면 컨텐츠 - 성운 배경 추가
+* [ ] 그룹 목록 추가
 
 ## Reference
 * [Create React App](https://create-react-app.dev/)
