@@ -13,10 +13,12 @@ import Background from './Core/components/Background/Background';
 import { NotFound } from './Core/pages/NotFound';
 import { ViewArticle } from './Article/pages/ViewArticle';
 import ArticleRepositoryMock from './Article/repository/ArticleRepository.mock';
+import Logger from './Core/util/Logger/Logger';
+
+const articleRepository = new ArticleRepositoryMock();
+Logger.debug(`Run application in ${process.env.NODE_ENV}.`);
 
 function App() {
-  const articleRepository = new ArticleRepositoryMock();
-
   return (
     <div className="App">
       {

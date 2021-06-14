@@ -16,7 +16,7 @@ export default function ViewArticleList({ repository }: Props) {
       setArticles(data);
     }
     fetchList();
-  });
+  }, []);
 
   if (articles.length === 0) {
     return null;
