@@ -11,5 +11,13 @@
 * [ ] 그룹 목록 추가
 * [ ] SNS 답글 기능 추가
 
+## Contents
+정리해야 할 글감들
+* Moving Motivators
+
+## Topics
+정리해야 할 스터디 토픽들
+* [ ] DTO(Data Transfer Object)
+
 ## Reference
 * [Create React App](https://create-react-app.dev/)
