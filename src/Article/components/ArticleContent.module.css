@@ -4,6 +4,7 @@
 
 .Wrap p {
     line-height: 2.0em;
+    font-size: 20px;
 }
 
 .Wrap ul {
@@ -16,5 +17,14 @@
 }
 
 .Wrap img {
+    width: 100%;
+}
+
+.Comment {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.Comment iframe {
     width: 100%;
 }

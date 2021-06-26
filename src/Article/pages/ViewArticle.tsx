@@ -34,7 +34,11 @@ export function ViewArticle({ repository }: Props) {
       }
       {
         article && (
-          <ArticleContent title={article.title} contents={article.contents} />
+          <ArticleContent
+            title={article.title}
+            contents={article.contents}
+            id={article.id}
+          />
         )
       }
     </>
