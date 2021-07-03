@@ -14,6 +14,7 @@
 ## Contents
 정리해야 할 글감들
 * Moving Motivators
+* VIM 사용기
 
 ## Topics
 정리해야 할 스터디 토픽들
