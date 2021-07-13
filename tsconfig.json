@@ -22,6 +22,15 @@
     "useDefineForClassFields": true
   },
   "include": [
-    "src"
-  ]
+    "src",
+    "public"
+  ],
+  "jest": {
+    "testMatch": [
+      [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ]
+    ]
+  }
 }
