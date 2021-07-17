@@ -9,12 +9,15 @@
 * [ ] 홈화면 컨텐츠 - 최근 작성된 글 섹션
 * [ ] 홈화면 컨텐츠 - 성운 배경 추가
 * [ ] 그룹 목록 추가
-* [ ] SNS 답글 기능 추가
+* [x] SNS 답글 기능 추가
+* [ ] 책 메뉴 추가하기
+
 
 ## Contents
 정리해야 할 글감들
 * Moving Motivators
 * VIM 사용기
+* Design patterns
 
 ## Topics
 정리해야 할 스터디 토픽들
