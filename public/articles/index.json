@@ -23,10 +23,17 @@
     },
     {
       "id": 4,
-      "title": "책 정리 - 위대한 코치, 빌 캠밸 ",
+      "title": "위대한 코치, 빌 캠밸 ",
       "createdAt": "2021-06-27",
-      "updatedAt": "2021-06-27",
-      "url": "/articles/personal-retrospect/books/kimbell-coaching.md"
+      "updatedAt": "2021-08-02",
+      "url": "/articles/books/books/kimbell-coaching.md"
+    },
+    {
+      "id": 5,
+      "title": "견습 개발자의 가이드북, '프로그래머의 길, 멘토에게 묻다'",
+      "createdAt": "2021-08-02",
+      "updatedAt": "2021-08-02",
+      "url": "/articles/books/apprenticeship-patterns.md"
     }
   ]
 }
