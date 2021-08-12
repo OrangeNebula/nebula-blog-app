@@ -19,6 +19,8 @@
 * Moving Motivators
 * VIM 사용기
 * Design patterns
+* 개발 언어에 대한 사색
+* May the code be with you
 
 ## Topics
 정리해야 할 스터디 토픽들
