@@ -25,6 +25,8 @@
 ## Topics
 정리해야 할 스터디 토픽들
 * [ ] DTO(Data Transfer Object)
+* [ ] Ioc, DI
+* [ ] CCC
 
 
 ## Commit Tag
