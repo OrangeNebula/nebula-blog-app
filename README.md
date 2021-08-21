@@ -21,6 +21,7 @@
 * Design patterns
 * 개발 언어에 대한 사색
 * May the code be with you
+* 실용주의 프로그래머 내용 정리하기
 
 ## Topics
 정리해야 할 스터디 토픽들
