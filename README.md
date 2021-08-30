@@ -15,20 +15,19 @@
 * [ ] 간단한 컨텐츠 생성 기능 (CMS)
 
 ## Contents
-정리해야 할 글감들
+정리해야 할 자연석
 * Moving Motivators
 * VIM 사용기
 * Design patterns
 * 개발 언어에 대한 사색
 * May the code be with you
 * 실용주의 프로그래머 내용 정리하기
-
-## Topics
-정리해야 할 스터디 토픽들
-* [ ] DTO(Data Transfer Object)
-* [ ] Ioc, DI
-* [ ] CCC
-
+* Differential Synchronization
+* switch 를 사용하는 상황들과 그것을 객체지향 관점에서 풀어내는 방법
+* BoundedContext 에 대해서
+* DTO(Data Transfer Object)
+* Ioc, DI
+* CCC
 
 ## Commit Tag
 * [스터디]
