@@ -29,11 +29,7 @@
 * DTO(Data Transfer Object)
 * Ioc, DI
 * CCC
-
-## Commit Tag
-* [스터디]
-* [글감]
-* [책]
+* 레거시코드 활용 전략
 
 ## Reference
 * [Create React App](https://create-react-app.dev/)
