@@ -30,6 +30,7 @@
 * Ioc, DI
 * CCC
 * 레거시코드 활용 전략
+* 스트레스, 로드 등등의 성능 테스트
 
 ## Reference
 * [Create React App](https://create-react-app.dev/)
