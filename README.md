@@ -31,6 +31,7 @@
 * CCC
 * 레거시코드 활용 전략
 * 스트레스, 로드 등등의 성능 테스트
+* 테스트 코드를 작성했을 때와 하지 않았을 때에 대한 ROI 실험
 
 ## Reference
 * [Create React App](https://create-react-app.dev/)
